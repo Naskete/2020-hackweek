@@ -13,6 +13,8 @@ public class gamePlayer {
     private Integer healthnum;
     //体力值
     private Integer strengthnum;
+    //饥饿值
+    private Integer hungernum;
     //食物
     private  Integer foodnum;
     //口罩数
@@ -39,6 +41,10 @@ public class gamePlayer {
     public Integer getFoodnum() { return foodnum; }
 
     public void setFoodnum(Integer foodnum) { this.foodnum = foodnum; }
+
+    public Integer getHungernum() { return hungernum; }
+
+    public void setHungernum(Integer hungernum) { this.hungernum = hungernum; }
 
     public Integer getMasknum() { return masknum; }
 
