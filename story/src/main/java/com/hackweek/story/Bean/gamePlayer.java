@@ -1,11 +1,13 @@
 package com.hackweek.story.Bean;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class gamePlayer {
     @Id
+    @GeneratedValue
     private Integer id;
     //名字
     private String name;
