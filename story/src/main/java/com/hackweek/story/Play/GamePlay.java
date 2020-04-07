@@ -14,6 +14,7 @@ import java.util.Random;
 
 @RestController
 public class GamePlay {
+    @Autowired
     private playerRepository playerRepository;
     //game start
     @GetMapping("/start")
@@ -54,6 +55,32 @@ public class GamePlay {
     public Object hospital(){
         List<event> hostpitalEvents=eventRepository.findeventsInHospital();
         return  hostpitalEvents;
+    }
+    @GetMapping("/gameover")
+    public Object gameOver(gamePlayer player){
+        List<event> gameOverEvent=eventRepository.findeventOver();
+        int num;
+        if(player.getHunger()<=0){
+            num=0;
+            return gameOverEvent.get(num);
+        }
+        if (player.getHealth()<=0){
+            num=1;
+            return gameOverEvent.get(num);
+        }
+        if (player.getMoney()<=0){
+            num=2;
+            return gameOverEvent.get(num);
+        }
+        if (player.getEnergy()<=0){
+            num=3;
+            return gameOverEvent.get(num);
+        }
+        if (player.getMood()<=0){
+            num=4;
+            return gameOverEvent.get(num);
+        }
+        return "game over";
     }
     @GetMapping("/test")
     public Object test(){

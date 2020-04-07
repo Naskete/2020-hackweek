@@ -18,4 +18,7 @@ public interface eventRepository extends JpaRepository<event,Integer> {
 
     @Query("select s from event s where s.id>16 and s.id<21")
     List<event> findeventsInSupermarker();
+
+    @Query("select s from event s where s.id>20 and s.id<26")
+    List<event> findeventOver();
 }

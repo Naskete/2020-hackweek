@@ -26,75 +26,39 @@ public class gamePlayer {
     //金钱
     private  Integer money;
 
-    public Integer getId() {
-        return id;
-    }
+    public Integer getId() { return id; }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    public void setId(Integer id) { this.id = id; }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) { this.name = name; }
 
-    public Integer getHealth() {
-        return health;
-    }
+    public Integer getHealth() { return health; }
 
-    public void setHealth(Integer health) {
-        this.health = health;
-    }
+    public void setHealth(Integer health) { this.health = health; }
 
-    public Integer getEnergy() {
-        return energy;
-    }
+    public Integer getEnergy() { return energy; }
 
-    public void setEnergy(Integer energy) {
-        this.energy = energy;
-    }
+    public void setEnergy(Integer energy) { this.energy = energy; }
 
-    public Integer getHunger() {
-        return hunger;
-    }
+    public Integer getHunger() { return hunger; }
 
-    public void setHunger(Integer hunger) {
-        this.hunger = hunger;
-    }
+    public void setHunger(Integer hunger) { this.hunger = hunger; }
 
-    public Integer getMood() {
-        return mood;
-    }
+    public Integer getMood() { return mood; }
 
-    public void setMood(Integer mood) {
-        this.mood = mood;
-    }
+    public void setMood(Integer mood) { this.mood = mood; }
 
-    public Integer getFood() {
-        return food;
-    }
+    public Integer getFood() { return food; }
 
-    public void setFood(Integer food) {
-        this.food = food;
-    }
+    public void setFood(Integer food) { this.food = food; }
 
-    public Integer getMask() {
-        return mask;
-    }
+    public Integer getMask() { return mask; }
 
-    public void setMask(Integer mask) {
-        this.mask = mask;
-    }
+    public void setMask(Integer mask) { this.mask = mask; }
 
-    public Integer getMoney() {
-        return money;
-    }
+    public Integer getMoney() { return money; }
 
-    public void setMoney(Integer money) {
-        this.money = money;
-    }
+    public void setMoney(Integer money) { this.money = money; }
 }
