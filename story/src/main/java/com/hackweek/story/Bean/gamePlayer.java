@@ -12,47 +12,89 @@ public class gamePlayer {
     //名字
     private String name;
     //健康值
-    private Integer healthnum;
+    private Integer health;
     //体力值
-    private Integer strengthnum;
+    private Integer energy;
     //饥饿值
-    private Integer hungernum;
+    private Integer hunger;
+    //情绪
+    private Integer mood;
     //食物
-    private  Integer foodnum;
+    private  Integer food;
     //口罩数
-    private Integer masknum;
+    private Integer mask;
     //金钱
     private  Integer money;
 
-    public Integer getId() { return id; }
+    public Integer getId() {
+        return id;
+    }
 
-    public void setId(Integer id) { this.id = id; }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
 
-    public void setName(String name) { this.name = name; }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public Integer getHealthnum() { return healthnum; }
+    public Integer getHealth() {
+        return health;
+    }
 
-    public void setHealthnum(Integer healthnum) { this.healthnum = healthnum; }
+    public void setHealth(Integer health) {
+        this.health = health;
+    }
 
-    public Integer getStrengthnum() { return strengthnum; }
+    public Integer getEnergy() {
+        return energy;
+    }
 
-    public void setStrengthnum(Integer strengthnum) { this.strengthnum = strengthnum; }
+    public void setEnergy(Integer energy) {
+        this.energy = energy;
+    }
 
-    public Integer getFoodnum() { return foodnum; }
+    public Integer getHunger() {
+        return hunger;
+    }
 
-    public void setFoodnum(Integer foodnum) { this.foodnum = foodnum; }
+    public void setHunger(Integer hunger) {
+        this.hunger = hunger;
+    }
 
-    public Integer getHungernum() { return hungernum; }
+    public Integer getMood() {
+        return mood;
+    }
 
-    public void setHungernum(Integer hungernum) { this.hungernum = hungernum; }
+    public void setMood(Integer mood) {
+        this.mood = mood;
+    }
 
-    public Integer getMasknum() { return masknum; }
+    public Integer getFood() {
+        return food;
+    }
 
-    public void setMasknum(Integer masknum) { this.masknum = masknum; }
+    public void setFood(Integer food) {
+        this.food = food;
+    }
 
-    public Integer getMoney() { return money; }
+    public Integer getMask() {
+        return mask;
+    }
 
-    public void setMoney(Integer money) { this.money = money; }
+    public void setMask(Integer mask) {
+        this.mask = mask;
+    }
+
+    public Integer getMoney() {
+        return money;
+    }
+
+    public void setMoney(Integer money) {
+        this.money = money;
+    }
 }

@@ -2,8 +2,8 @@ package com.hackweek.story.Play;
 
 import com.hackweek.story.Bean.event;
 import com.hackweek.story.Bean.gamePlayer;
-import com.hackweek.story.Mapper.eventRepository;
-import com.hackweek.story.Mapper.playerRepository;
+import com.hackweek.story.Repository.eventRepository;
+import com.hackweek.story.Repository.playerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,11 +20,12 @@ public class GamePlay {
     public gamePlayer start(@RequestParam(value = "name", required = false, defaultValue = "可乐") String name) {
         gamePlayer player = new gamePlayer();
         player.setName(name);
-        player.setHealthnum(100);
-        player.setHungernum(100);
-        player.setStrengthnum(100);
-        player.setFoodnum(10);
-        player.setMasknum(10);
+        player.setEnergy(100);
+        player.setHealth(100);
+        player.setHunger(100);
+        player.setMood(100);
+        player.setMask(5);
+        player.setFood(5);
         player.setMoney(1000);
         playerRepository.save(player);
         return player;

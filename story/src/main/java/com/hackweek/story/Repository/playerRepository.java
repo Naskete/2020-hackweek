@@ -1,4 +1,4 @@
-package com.hackweek.story.Mapper;
+package com.hackweek.story.Repository;
 
 import com.hackweek.story.Bean.gamePlayer;
 import org.springframework.data.jpa.repository.JpaRepository;
