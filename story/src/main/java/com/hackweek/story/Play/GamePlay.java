@@ -66,14 +66,13 @@ public class GamePlay {
     @GetMapping("/test")
     public Object test() {
         List<event> events = eventRepository.findeventsInHouse();
-
-        public ResultJson{List<ResultJson> resultJsons = new LinkedList<>();
+        List<ResultJson> resultJsons = new LinkedList<>();
         for (int i = 0; i < 6; i++) {
             String str = events.get(i).getOptions();
             JSONArray jsonArray = JSON.parseArray(str);
-            Map<String, JSONArray> map = new HashMap<>();
-            map.put("option", jsonArray);
             ResultJson json = new ResultJson();
+            Map<String,JSONArray> map=new HashMap<>();
+            map.put("options",jsonArray);
             json.setId(events.get(i).getId());
             json.setName(events.get(i).getName());
             json.setDescription(events.get(i).getDescription());
@@ -81,6 +80,5 @@ public class GamePlay {
             resultJsons.add(json);
         }
         return resultJsons;
-    }
     }
 }
