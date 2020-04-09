@@ -7,33 +7,24 @@ import javax.persistence.Id;
 public class event {
     @Id
     private Integer id;
-    private String eventname;
-    private String content;
-    private String problem;
-    private String answerA;
-    private String answerB;
+    private String name;
+    private String description;
+    private String options;
+
 
     public Integer getId() { return id; }
 
     public void setId(Integer id) { this.id = id; }
 
-    public String getEventname() { return eventname; }
+    public String getName() { return name; }
 
-    public void setEventname(String eventname) { this.eventname = eventname; }
+    public void setName(String name) { this.name = name; }
 
-    public String getContent() { return content; }
+    public String getDescription() { return description; }
 
-    public void setContent(String content) { this.content = content; }
+    public void setDescription(String description) { this.description = description; }
 
-    public String getProblem() { return problem; }
+    public String getOptions() { return options; }
 
-    public void setProblem(String problem) { this.problem = problem; }
-
-    public String getAnswerA() { return answerA; }
-
-    public void setAnswerA(String answerA) { this.answerA = answerA; }
-
-    public String getAnswerB() { return answerB; }
-
-    public void setAnswerB(String answerB) { this.answerB = answerB; }
+    public void setOptions(String options) { this.options = options; }
 }
