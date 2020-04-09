@@ -8,8 +8,8 @@ public class ResultJson {
         private int id;
         private String name;
         private String description;
-        private Map<String, JSONArray> map;
-        //private JSONArray options;
+        //private Map<String, JSONArray> map;
+        private JSONArray options;
 
         public int getId() { return id; }
 
@@ -23,11 +23,11 @@ public class ResultJson {
 
         public void setDescription(String description) { this.description = description; }
 
-        public Map<String, JSONArray> getMap() { return map; }
+        //public Map<String, JSONArray> getMap() { return map; }
 
-        public void setMap(Map<String, JSONArray> map) { this.map = map; }
+        //public void setMap(Map<String, JSONArray> map) { this.map = map; }
 
-        //public JSONArray getOptions() { return options; }
+        public JSONArray getOptions() { return options; }
 
-        //public void setOptions(JSONArray options) { this.options = options; }
+        public void setOptions(JSONArray options) { this.options = options; }
 }
