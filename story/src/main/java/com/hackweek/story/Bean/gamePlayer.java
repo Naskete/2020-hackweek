@@ -42,7 +42,7 @@ public class gamePlayer {
 
     public void setEnergy(Integer energy) { this.energy = energy; }
 
-    public Integer getHunger() { return hunger; }
+    public Integer getHunger() { return hunger;}
 
     public void setHunger(Integer hunger) { this.hunger = hunger; }
 

@@ -39,49 +39,90 @@ public class GamePlay {
     //获取事件
     @Autowired
     private eventRepository eventRepository;
+    private List<ResultJson> resultJsons=new LinkedList<>();
 
     //事件（场景触发）
     //家中
     @GetMapping("/house")
     public Object choose() {
-        return eventRepository.findeventsInHouse();
+        List<event> eventsInHouse=eventRepository.findeventsInHouse();
+        for (int i=0;i<7;i++){
+            String str =eventsInHouse.get(i).getOptions();
+            JSONArray jsonArray = JSON.parseArray(str);
+            ResultJson json = new ResultJson();
+            json.setId(eventsInHouse.get(i).getId());
+            json.setName(eventsInHouse.get(i).getName());
+            json.setDescription(eventsInHouse.get(i).getDescription());
+            json.setOptions(jsonArray);
+            resultJsons.add(json);
+        }
+        return resultJsons;
     }
     //小区门口
     @GetMapping("/gate")
     public Object gateEvents(){
-        return eventRepository.findeventsInGAte();
+        List<event> eventsInGate= eventRepository.findeventsInGAte();
+        for (int i = 0; i < 6; i++) {
+            String str =eventsInGate.get(i).getOptions();
+            JSONArray jsonArray = JSON.parseArray(str);
+            ResultJson json = new ResultJson();
+            json.setId(eventsInGate.get(i).getId());
+            json.setName(eventsInGate.get(i).getName());
+            json.setDescription(eventsInGate.get(i).getDescription());
+            json.setOptions(jsonArray);
+            resultJsons.add(json);
+        }
+        return resultJsons;
     }
     //超市
     @GetMapping("/supermarket")
     public Object superEvents(){
-        return eventRepository.findeventsInSupermarker();
+        List<event> eventsInSupermasrket= eventRepository.findeventsInSupermarker();
+        for (int i = 0; i < 6; i++) {
+            String str =eventsInSupermasrket.get(i).getOptions();
+            JSONArray jsonArray = JSON.parseArray(str);
+            ResultJson json = new ResultJson();
+            json.setId(eventsInSupermasrket.get(i).getId());
+            json.setName(eventsInSupermasrket.get(i).getName());
+            json.setDescription(eventsInSupermasrket.get(i).getDescription());
+            json.setOptions(jsonArray);
+            resultJsons.add(json);
+        }
+        return resultJsons;
     }
     //医院
     @GetMapping("/hospital")
     public Object hospital(){
-        return eventRepository.findeventsInHospital();
+        List<event> eventsInHospital= eventRepository.findeventsInHospital();
+        for (int i = 0; i < 6; i++) {
+            String str =eventsInHospital.get(i).getOptions();
+            JSONArray jsonArray = JSON.parseArray(str);
+            ResultJson json = new ResultJson();
+            json.setId(eventsInHospital.get(i).getId());
+            json.setName(eventsInHospital.get(i).getName());
+            json.setDescription(eventsInHospital.get(i).getDescription());
+            json.setOptions(jsonArray);
+            resultJsons.add(json);
+        }
+        return resultJsons;
     }
     //game over
     @GetMapping("/gameover")
     public Object gameOver(){
-        return eventRepository.findeventOver();
+        List<event> gameOver= eventRepository.findeventOver();
+        for (int i = 0; i < 6; i++) {
+            String str =gameOver.get(i).getOptions();
+            JSONArray jsonArray = JSON.parseArray(str);
+            ResultJson json = new ResultJson();
+            json.setId(gameOver.get(i).getId());
+            json.setName(gameOver.get(i).getName());
+            json.setDescription(gameOver.get(i).getDescription());
+            json.setOptions(jsonArray);
+            resultJsons.add(json);
+        }
+        return resultJsons;
     }
 
 
-    @GetMapping("/test")
-    public Object test() {
-        List<event> events = eventRepository.findeventsInHouse();
-            List<ResultJson> resultJsons = new LinkedList<>();
-            for (int i = 0; i < 6; i++) {
-                String str = events.get(i).getOptions();
-                JSONArray jsonArray = JSON.parseArray(str);
-                ResultJson json = new ResultJson();
-                json.setId(events.get(i).getId());
-                json.setName(events.get(i).getName());
-                json.setDescription(events.get(i).getDescription());
-                json.setOptions(jsonArray);
-                resultJsons.add(json);
-            }
-            return resultJsons;
-        }
+
 }
