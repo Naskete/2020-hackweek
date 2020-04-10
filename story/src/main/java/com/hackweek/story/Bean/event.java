@@ -6,9 +6,13 @@ import javax.persistence.Id;
 @Entity
 public class event {
     @Id
+    //事件id
     private Integer id;
+    //事件名称
     private String name;
+    //事件的描述（问题）
     private String description;
+    //事件的选项及及结果
     private String options;
 
 

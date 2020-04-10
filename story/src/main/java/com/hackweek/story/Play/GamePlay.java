@@ -19,6 +19,9 @@ import java.util.List;
 public class GamePlay {
     @Autowired
     private playerRepository playerRepository;
+    //获取事件
+    @Autowired
+    private eventRepository eventRepository;
 
     //game start
     @GetMapping("/start")
@@ -28,17 +31,12 @@ public class GamePlay {
         player.setName(name);
         player.setEnergy(100);
         player.setHealth(100);
-        player.setHunger(100);
         player.setMood(100);
-        player.setMask(5);
-        player.setFood(5);
-        player.setMoney(1000);
+        player.setMask(20);
+        player.setMoney(5000);
         playerRepository.save(player);
         return player;
     }
-    //获取事件
-    @Autowired
-    private eventRepository eventRepository;
 
     //事件（场景触发）
     //家中

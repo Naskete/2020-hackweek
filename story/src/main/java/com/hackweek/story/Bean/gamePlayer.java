@@ -15,12 +15,8 @@ public class gamePlayer {
     private Integer health;
     //体力值
     private Integer energy;
-    //饥饿值
-    private Integer hunger;
     //情绪
     private Integer mood;
-    //食物
-    private  Integer food;
     //口罩数
     private Integer mask;
     //金钱
@@ -42,17 +38,9 @@ public class gamePlayer {
 
     public void setEnergy(Integer energy) { this.energy = energy; }
 
-    public Integer getHunger() { return hunger;}
-
-    public void setHunger(Integer hunger) { this.hunger = hunger; }
-
     public Integer getMood() { return mood; }
 
     public void setMood(Integer mood) { this.mood = mood; }
-
-    public Integer getFood() { return food; }
-
-    public void setFood(Integer food) { this.food = food; }
 
     public Integer getMask() { return mask; }
 

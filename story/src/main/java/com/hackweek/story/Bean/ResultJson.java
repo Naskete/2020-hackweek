@@ -2,13 +2,16 @@ package com.hackweek.story.Bean;
 
 import com.alibaba.fastjson.JSONArray;
 
-import java.util.Map;
-
 public class ResultJson {
+        //返回json数据集合
+
+        //id，对应event中的id
         private int id;
+        //name，对应event中的name
         private String name;
+        //descrption对应event中的description
         private String description;
-        //private Map<String, JSONArray> map;
+        //options对应event中的options
         private JSONArray options;
 
         public int getId() { return id; }
@@ -22,10 +25,6 @@ public class ResultJson {
         public String getDescription() { return description; }
 
         public void setDescription(String description) { this.description = description; }
-
-        //public Map<String, JSONArray> getMap() { return map; }
-
-        //public void setMap(Map<String, JSONArray> map) { this.map = map; }
 
         public JSONArray getOptions() { return options; }
 
