@@ -39,13 +39,13 @@ public class GamePlay {
     //获取事件
     @Autowired
     private eventRepository eventRepository;
-    private List<ResultJson> resultJsons=new LinkedList<>();
 
     //事件（场景触发）
     //家中
     @GetMapping("/house")
     public Object choose() {
         List<event> eventsInHouse=eventRepository.findeventsInHouse();
+        List<ResultJson> resultJsons=new LinkedList<>();
         for (int i=0;i<7;i++){
             String str =eventsInHouse.get(i).getOptions();
             JSONArray jsonArray = JSON.parseArray(str);
@@ -62,6 +62,7 @@ public class GamePlay {
     @GetMapping("/gate")
     public Object gateEvents(){
         List<event> eventsInGate= eventRepository.findeventsInGAte();
+        List<ResultJson> resultJsons=new LinkedList<>();
         for (int i = 0; i < 6; i++) {
             String str =eventsInGate.get(i).getOptions();
             JSONArray jsonArray = JSON.parseArray(str);
@@ -78,6 +79,7 @@ public class GamePlay {
     @GetMapping("/supermarket")
     public Object superEvents(){
         List<event> eventsInSupermasrket= eventRepository.findeventsInSupermarker();
+        List<ResultJson> resultJsons=new LinkedList<>();
         for (int i = 0; i < 6; i++) {
             String str =eventsInSupermasrket.get(i).getOptions();
             JSONArray jsonArray = JSON.parseArray(str);
@@ -94,6 +96,7 @@ public class GamePlay {
     @GetMapping("/hospital")
     public Object hospital(){
         List<event> eventsInHospital= eventRepository.findeventsInHospital();
+        List<ResultJson> resultJsons=new LinkedList<>();
         for (int i = 0; i < 6; i++) {
             String str =eventsInHospital.get(i).getOptions();
             JSONArray jsonArray = JSON.parseArray(str);
@@ -110,6 +113,7 @@ public class GamePlay {
     @GetMapping("/gameover")
     public Object gameOver(){
         List<event> gameOver= eventRepository.findeventOver();
+        List<ResultJson> resultJsons=new LinkedList<>();
         for (int i = 0; i < 6; i++) {
             String str =gameOver.get(i).getOptions();
             JSONArray jsonArray = JSON.parseArray(str);
@@ -122,7 +126,4 @@ public class GamePlay {
         }
         return resultJsons;
     }
-
-
-
 }
