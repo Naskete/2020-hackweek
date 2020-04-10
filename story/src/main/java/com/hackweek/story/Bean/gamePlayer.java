@@ -1,17 +1,6 @@
 package com.hackweek.story.Bean;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-@Entity
 public class gamePlayer {
-    @Id
-    @GeneratedValue
-    private Integer id;
-    //名字
-    private String name;
-    //健康值
     private Integer health;
     //体力值
     private Integer energy;
@@ -21,14 +10,6 @@ public class gamePlayer {
     private Integer mask;
     //金钱
     private  Integer money;
-
-    public Integer getId() { return id; }
-
-    public void setId(Integer id) { this.id = id; }
-
-    public String getName() { return name; }
-
-    public void setName(String name) { this.name = name; }
 
     public Integer getHealth() { return health; }
 

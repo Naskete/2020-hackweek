@@ -6,10 +6,8 @@ import com.hackweek.story.Bean.ResultJson;
 import com.hackweek.story.Bean.event;
 import com.hackweek.story.Bean.gamePlayer;
 import com.hackweek.story.Repository.eventRepository;
-import com.hackweek.story.Repository.playerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.LinkedList;
@@ -17,24 +15,20 @@ import java.util.List;
 
 @RestController
 public class GamePlay {
-    @Autowired
-    private playerRepository playerRepository;
     //获取事件
     @Autowired
     private eventRepository eventRepository;
 
     //game start
     @GetMapping("/start")
-    public gamePlayer start(@RequestParam(value = "name", required = false, defaultValue = "可乐") String name) {
+    public gamePlayer start() {
         //创建一个玩家对象，并设置初始值
         gamePlayer player = new gamePlayer();
-        player.setName(name);
         player.setEnergy(100);
         player.setHealth(100);
         player.setMood(100);
         player.setMask(20);
         player.setMoney(5000);
-        playerRepository.save(player);
         return player;
     }
 
@@ -61,7 +55,7 @@ public class GamePlay {
     public Object gateEvents(){
         List<event> eventsInGate= eventRepository.findeventsInGAte();
         List<ResultJson> resultJsons=new LinkedList<>();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 4; i++) {
             String str =eventsInGate.get(i).getOptions();
             JSONArray jsonArray = JSON.parseArray(str);
             ResultJson json = new ResultJson();
@@ -78,7 +72,7 @@ public class GamePlay {
     public Object superEvents(){
         List<event> eventsInSupermasrket= eventRepository.findeventsInSupermarker();
         List<ResultJson> resultJsons=new LinkedList<>();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 3; i++) {
             String str =eventsInSupermasrket.get(i).getOptions();
             JSONArray jsonArray = JSON.parseArray(str);
             ResultJson json = new ResultJson();
@@ -95,7 +89,7 @@ public class GamePlay {
     public Object hospital(){
         List<event> eventsInHospital= eventRepository.findeventsInHospital();
         List<ResultJson> resultJsons=new LinkedList<>();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 3; i++) {
             String str =eventsInHospital.get(i).getOptions();
             JSONArray jsonArray = JSON.parseArray(str);
             ResultJson json = new ResultJson();
@@ -112,7 +106,7 @@ public class GamePlay {
     public Object gameOver(){
         List<event> gameOver= eventRepository.findeventOver();
         List<ResultJson> resultJsons=new LinkedList<>();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 3; i++) {
             String str =gameOver.get(i).getOptions();
             JSONArray jsonArray = JSON.parseArray(str);
             ResultJson json = new ResultJson();
