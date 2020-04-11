@@ -44,10 +44,8 @@ URL:http://121.199.32.101:8088/house
                     "mood": -10,
                     "money": -10,
                     "health": -10,
-                    "food": 1,
                     "mask": -1,
-                    "energy": 10,
-                    "hunger": 10
+                    "energy": 10
                 },
                 "flag": 0,
                 "name": "A.开始"
@@ -57,10 +55,8 @@ URL:http://121.199.32.101:8088/house
                     "mood": -10,
                     "money": -10,
                     "health": -10,
-                    "food": 1,
                     "mask": -1,
-                    "energy": 10,
-                    "hunger": 10
+                    "energy": 10
                 },
                 "flag": 0,
                 "name": "B.开始"
@@ -93,10 +89,8 @@ URL:http://121.199.32.101:8088/supermarket
                     "mood": -10,
                     "money": -10,
                     "health": -10,
-                    "food": 1,
                     "mask": -1,
-                    "energy": 10,
-                    "hunger": 10
+                    "energy": 10
                 },
                 "flag": 0,
                 "name": "A.选择"
@@ -106,10 +100,8 @@ URL:http://121.199.32.101:8088/supermarket
                     "mood": -10,
                     "money": -10,
                     "health": -10,
-                    "food": 1,
                     "mask": -1,
-                    "energy": 10,
-                    "hunger": 10
+                    "energy": 10
                 },
                 "flag": 0,
                 "name": "B.选择"
@@ -144,10 +136,8 @@ URL:http://121.199.32.101:8088/gate
                     "mood": -10,
                     "money": -10,
                     "health": -10,
-                    "food": 1,
                     "mask": -1,
-                    "energy": 10,
-                    "hunger": 10
+                    "energy": 10
                 },
                 "flag": 0,
                 "name": "A.选项"
@@ -157,10 +147,8 @@ URL:http://121.199.32.101:8088/gate
                     "mood": -10,
                     "money": -10,
                     "health": -10,
-                    "food": 1,
                     "mask": -1,
-                    "energy": 10,
-                    "hunger": 10
+                    "energy": 10
                 },
                 "flag": 0,
                 "name": "B.选项"
@@ -195,10 +183,8 @@ URL:http://121.199.32.101:8088/hospital
                     "mood": -10,
                     "money": -10,
                     "health": -10,
-                    "food": 1,
                     "mask": -1,
-                    "energy": 10,
-                    "hunger": 10
+                    "energy": 10
                 },
                 "flag": 0,
                 "name": "A.选项"
@@ -208,10 +194,8 @@ URL:http://121.199.32.101:8088/hospital
                     "mood": -10,
                     "money": -10,
                     "health": -10,
-                    "food": 1,
                     "mask": -1,
-                    "energy": 10,
-                    "hunger": 10
+                    "energy": 10
                 },
                 "flag": 0,
                 "name": "B.选项"
