@@ -48,7 +48,7 @@ URL:http://121.199.32.101:8088/house
                     "energy": 10
                 },
                 "flag": 0,
-                "name": "A.开始"
+                "name": "开始"
             },
             {
                 "result": {
@@ -59,7 +59,7 @@ URL:http://121.199.32.101:8088/house
                     "energy": 10
                 },
                 "flag": 0,
-                "name": "B.开始"
+                "name": "开始"
             }
         ]
     },
@@ -93,7 +93,7 @@ URL:http://121.199.32.101:8088/supermarket
                     "energy": 10
                 },
                 "flag": 0,
-                "name": "A.选择"
+                "name": "选择"
             },
             {
                 "result": {
@@ -104,7 +104,7 @@ URL:http://121.199.32.101:8088/supermarket
                     "energy": 10
                 },
                 "flag": 0,
-                "name": "B.选择"
+                "name": "选择"
             }
         ]
     },
@@ -140,7 +140,7 @@ URL:http://121.199.32.101:8088/gate
                     "energy": 10
                 },
                 "flag": 0,
-                "name": "A.选项"
+                "name": "选项"
             },
             {
                 "result": {
@@ -150,8 +150,8 @@ URL:http://121.199.32.101:8088/gate
                     "mask": -1,
                     "energy": 10
                 },
-                "flag": 0,
-                "name": "B.选项"
+                "flag": 1,
+                "name": "选项"
             }
         ]
     },
@@ -187,7 +187,7 @@ URL:http://121.199.32.101:8088/hospital
                     "energy": 10
                 },
                 "flag": 0,
-                "name": "A.选项"
+                "name": "选项"
             },
             {
                 "result": {
@@ -197,8 +197,8 @@ URL:http://121.199.32.101:8088/hospital
                     "mask": -1,
                     "energy": 10
                 },
-                "flag": 0,
-                "name": "B.选项"
+                "flag": 1,
+                "name": "选项"
             }
         ]
     },
@@ -221,17 +221,10 @@ URL:http://121.199.32.101:8088/gameover
 ```json
 [
     {
-        "id": 21,
+        "id": 29,
         "name": "game over",
-        "description": "结局一",
-        "options": [
-            {
-                "id": 0
-            },
-            {
-                "id": 2
-            }
-        ]
+        "description": "在家咸鱼了很久终于等到疫情过去，春天到来，一年之计在于此，你也该重新寻找自己的方向",
+        "options": []
     },
     ...
 ]
