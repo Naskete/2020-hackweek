@@ -37,32 +37,34 @@ public class GamePlay {
     @GetMapping("/house")
     public Object choose() {
         List<event> eventsInHouse=eventRepository.findeventsInHouse();
-        return returnJson(eventsInHouse,3);
+        return returnJson(eventsInHouse,eventsInHouse.size());
     }
     //小区门口
     @GetMapping("/gate")
     public Object gateEvents(){
         List<event> eventsInGate= eventRepository.findeventsInGAte();
-        return returnJson(eventsInGate,3);
+        return returnJson(eventsInGate,eventsInGate.size());
     }
     //超市
     @GetMapping("/supermarket")
     public Object superEvents(){
         List<event> eventsInSupermasrket= eventRepository.findeventsInSupermarker();
-        return returnJson(eventsInSupermasrket,3);
+        return returnJson(eventsInSupermasrket,eventsInSupermasrket.size());
     }
     //医院
     @GetMapping("/hospital")
     public Object hospital(){
         List<event> eventsInHospital= eventRepository.findeventsInHospital();
-        return returnJson(eventsInHospital,3);
+        return returnJson(eventsInHospital,eventsInHospital.size());
     }
     //game over
     @GetMapping("/gameover")
     public Object gameOver(){
         List<event> gameOver= eventRepository.findeventOver();
-        return returnJson(gameOver,3);
+        return returnJson(gameOver,gameOver.size());
     }
+    //定义方法
+    //events 对应的事件列表，n 列表长度，即事件个数
     public List<ResultJson> returnJson(List<event> events,int n){
         List<ResultJson> resultJsons=new LinkedList<>();
         for (int i = 0; i < n; i++) {
